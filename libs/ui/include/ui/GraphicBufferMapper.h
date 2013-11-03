@@ -79,6 +79,10 @@ public:
         return *mMapper;
     }
 
+#ifdef EXYNOS4_ENHANCEMENTS
+    status_t getphys(buffer_handle_t handle, void** paddr);
+#endif
+
 private:
     friend class Singleton<GraphicBufferMapper>;
 
